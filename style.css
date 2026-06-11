@@ -1,0 +1,501 @@
+/* =======================================================================
+   1. PORTADA VIDEO HERO (ESTRUCTURA FIJA OBLIGATORIA)
+   ======================================================================= */
+.video-hero {
+  position: relative;
+  height: 100vh; 
+  width: 100%;
+  margin: 0;
+  overflow: hidden;
+  background-color: #000000;
+  z-index: 10;
+}
+.hero-video-bg {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 100%;
+  height: 100%;
+  object-fit: cover; 
+  transform: translate(-50%, -50%);
+  z-index: 1; 
+}
+.hero-video-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.45); 
+  z-index: 2; 
+}
+.hero-video-content {
+  position: relative;
+  z-index: 3; 
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.video-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+
+/* --- CABECERA  --- */
+.main-header, .vcass-header {
+  background-color: transparent !important; 
+  padding: 2.5rem 2rem;
+  max-width: 1100px;
+  width: 100%;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.brand-container {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+#logo, .logo-text {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 1.8rem;
+  color: #ffffff !important; 
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  display: inline-block;
+}
+#logo span, .logo-text span {
+  color: #A2D973 !important; 
+}
+
+.hero-nav {
+  display: flex !important;
+  gap: 1.5rem !important;
+  flex-wrap: nowrap !important; 
+}
+.hero-nav a {
+  color: #ffffff !important;
+  text-decoration: none;
+  font-weight: 700;
+  text-transform: uppercase;
+  font-family: 'DM Sans', sans-serif;
+  font-size: 0.9rem; 
+  letter-spacing: 1px;
+  opacity: 0.7;
+  transition: all 0.3s ease;
+  white-space: nowrap; 
+}
+.hero-nav a:hover, .hero-nav a.active {
+  opacity: 1;
+  color: #A2D973 !important; 
+}
+
+/* --- CONTENIDO CENTRAL HERO --- */
+.hero-center-text {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  flex-grow: 1;
+  text-align: center;
+  padding-bottom: 6rem; 
+}
+.hero-main-title {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 6rem;
+  color: #ffffff;
+  line-height: 0.95;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  margin-bottom: 1rem;
+}
+.hero-subtitle {
+  font-family: 'Space Mono', monospace;
+  font-size: 1.2rem; 
+  color: #A2D973; 
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+}
+.btn-hero-green {
+  display: inline-block;
+  background-color: #A2D973 !important; 
+  color: #233021 !important; 
+  text-decoration: none;
+  padding: 0.9rem 2.2rem;
+  border-radius: 30px;
+  font-family: 'DM Sans', sans-serif;
+  font-weight: 700;
+  text-transform: uppercase;
+  font-size: 0.9rem;
+  letter-spacing: 0.5px;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(162, 217, 115, 0.3);
+}
+.btn-hero-green:hover {
+  background-color: #ffffff !important;
+  color: #233021 !important;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(255, 255, 255, 0.4);
+}
+
+/* =======================================================================
+   2. CONFIGURACIÓN BASE Y VARIABLES GLOBALES
+   ======================================================================= */
+:root {
+  --verde-principal: #5E7A5A;
+  --verde-oscuro: #3A4F37;
+  --verde-clarito: #E2EFE0;
+  --crema-fondo: #FCFBF7;
+  --blanco: #FFFFFF;
+  --texto: #2B2D2B;
+  --gris-claro: #F4F4F4;
+  --accent: #D4A373;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'DM Sans', sans-serif;
+  background-color: var(--crema-fondo); 
+  color: var(--texto);
+  line-height: 1.6;
+  font-size: 17px; 
+}
+
+#wrap-main {
+  width: 100%;
+  background-color: transparent;
+}
+.container-bleed {
+  max-width: 1100px;
+  width: 100%;
+  margin: 0 auto;
+  padding-left: 2rem;
+  padding-right: 2rem;
+}
+.que-es-section, .rutas-section, .mapa-section, .comunidad-section, .primera-vez-section {
+  padding-top: 4.5rem;
+  padding-bottom: 4.5rem;
+}
+hr.container-bleed {
+  border: 0;
+  height: 1px;
+  background-color: rgba(0,0,0,0.08);
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+h1 {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 1.5rem;
+  letter-spacing: 1px;
+  color: var(--verde-oscuro);
+  line-height: 1;
+  text-transform: uppercase;
+}
+.section-label {
+  font-family: 'Space Mono', monospace;
+  text-transform: uppercase;
+  color: var(--accent);
+  font-size: 0.95rem; 
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+.section-title {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 2.8rem; 
+  color: var(--verde-oscuro);
+  margin-bottom: 1rem;
+}
+
+/* =======================================================================
+   3. GRILLAS Y COMPONENTES REUTILIZABLES (HOME)
+   ======================================================================= */
+.features-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+.feature-card {
+  background-color: var(--blanco);
+  padding: 1.5rem;
+  border-radius: 8px;
+  border: 1px solid rgba(0,0,0,0.04);
+  transition: transform 0.3s ease;
+}
+.feature-card:hover { transform: translateY(-4px); }
+.feature-icon { font-size: 2rem; margin-bottom: 0.5rem; }
+.feature-card h4 { font-size: 1.2rem; margin-bottom: 0.5rem; color: var(--verde-oscuro); }
+.feature-card p { font-size: 1rem; }
+
+/* --- SECCIÓN RUTAS --- */
+.rutas-header { display: flex; justify-content: space-between; align-items: flex-end; margin-bottom: 2rem; }
+.rutas-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem; margin-bottom: 3rem; }
+.ruta-card {
+  background-color: var(--blanco);
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.02);
+  display: flex;
+  flex-direction: column;
+}
+.ruta-header { padding: 1rem 1.5rem; display: flex; justify-content: space-between; align-items: center; color: var(--blanco); }
+.nivel-basico .ruta-header { background-color: #6B8E23; }
+.nivel-medio .ruta-header { background-color: #4682B4; }
+.nivel-avanzado .ruta-header { background-color: #CD5C5C; }
+.ruta-nivel { font-family: 'Bebas Neue', sans-serif; font-size: 1.5rem; }
+.ruta-badge { font-family: 'Space Mono', monospace; font-size: 0.8rem; background-color: rgba(255,255,255,0.2); padding: 0.2rem 0.6rem; border-radius: 4px; }
+.ruta-body { padding: 1.5rem; display: flex; flex-direction: column; flex-grow: 1; }
+.ruta-stats {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0.5rem;
+  background-color: var(--gris-claro);
+  padding: 0.8rem;
+  border-radius: 6px;
+  margin-bottom: 1rem;
+  font-family: 'Space Mono', monospace;
+  text-align: center;
+  font-size: 0.8rem;
+}
+.ruta-stat span { display: block; }
+.ruta-stat span:first-child { text-transform: uppercase; color: #777; font-size: 0.65rem; }
+.ruta-stat span:last-child { font-weight: 700; color: var(--texto); }
+.ruta-desc { font-size: 1.05rem; margin-bottom: 1.5rem; flex-grow: 1; } 
+.btn-ruta {
+  text-decoration: none;
+  text-align: center;
+  padding: 0.6rem;
+  border: 1px solid var(--verde-principal);
+  color: var(--verde-principal);
+  border-radius: 6px;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+.btn-ruta:hover { background-color: var(--verde-principal); color: var(--blanco); }
+
+/* --- SECCIÓN MAPAS --- */
+.mapa-section { display: grid; grid-template-columns: 1fr 1.2fr; gap: 2.5rem; align-items: center; }
+#wrap-video { width: 100%; height: 350px; border-radius: 8px; overflow: hidden; box-shadow: 0 4px 12px rgba(0,0,0,0.05); }
+#wrap-video iframe { width: 100%; height: 100%; border: 0; }
+.mapa-text .btn-primary { margin-top: 1.5rem; }
+
+/* --- SECCIÓN CAFETERÍAS MÁSTER --- */
+.cafeterias-section {
+  background-color: var(--blanco);
+  width: 100%;
+  padding-top: 4.5rem;
+  padding-bottom: 4.5rem;
+  border-top: 1px solid rgba(0,0,0,0.03);
+  border-bottom: 1px solid rgba(0,0,0,0.03);
+}
+
+/* --- RECURSOS AUDIO Y REDES --- */
+.pv-subtitle { margin-bottom: 2rem; font-size: 1.1rem; }
+.audio-block { background-color: var(--gris-claro); padding: 1.5rem; border-radius: 8px; margin-bottom: 2rem; }
+.audio-desc { font-size: 1rem; margin-bottom: 1rem; }
+
+.wpp-banner {
+  background-color: #25D366;
+  color: var(--blanco);
+  padding: 1.5rem 2rem;
+  border-radius: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+.wpp-banner h4 { font-family: 'Bebas Neue', sans-serif; font-size: 1.6rem; }
+.wpp-banner p { font-size: 1.05rem; }
+.btn-wpp {
+  background-color: var(--blanco);
+  color: #25D366;
+  text-decoration: none;
+  padding: 0.6rem 1.2rem;
+  border-radius: 6px;
+  font-weight: bold;
+  transition: transform 0.2s ease;
+}
+.btn-wpp:hover { transform: scale(1.03); }
+
+.btn-primary {
+  display: inline-block;
+  background-color: var(--verde-oscuro);
+  color: var(--blanco);
+  text-decoration: none;
+  padding: 0.8rem 1.8rem;
+  border-radius: 30px;
+  font-weight: 700;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+.btn-primary:hover {
+  background-color: var(--verde-principal);
+  transform: translateY(-2px);
+}
+
+#footer { font-family: 'Space Mono', monospace; font-size: 0.8rem; color: #777; text-align: center; padding: 2rem 0; }
+
+/* =======================================================================
+   4. ESTRUCTURAS INTERNAS (NIVELES, AUTORA, ETC)
+   ======================================================================= */
+.internal-header-bar { background-color: #111111; width: 100%; }
+.interna-section { padding: 3rem 0; }
+.interna-grid { display: grid; grid-template-columns: 1fr; gap: 2rem; margin-top: 2rem; }
+.interna-card-detail { background-color: var(--blanco); padding: 2.5rem; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.04); }
+.interna-card-detail h3 { font-family: 'Bebas Neue', sans-serif; font-size: 2.2rem; color: var(--verde-oscuro); margin-bottom: 0.3rem; }
+.interna-card-detail p { font-size: 1.05rem; }
+.basic-border { border-top: 5px solid #6B8E23; }
+.medio-border { border-top: 5px solid #4682B4; }
+.avanzado-border { border-top: 5px solid #CD5C5C; }
+
+.autora-block { display: grid; grid-template-columns: 300px 1fr; gap: 3rem; align-items: center; margin-top: 2rem; }
+.img-internal { width: 100%; height: auto; border-radius: 12px; box-shadow: 0 6px 18px rgba(0,0,0,0.08); }
+.autora-content p { font-size: 1.05rem; }
+.ubp-tag { font-family: 'Space Mono', monospace; font-size: 0.9rem; color: #666; }
+.contacto-section { display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; align-items: center; }
+.contacto-text p { font-size: 1.05rem; }
+.contact-links { display: flex; flex-direction: column; gap: 1.2rem; }
+.contact-link { text-decoration: none; color: var(--verde-oscuro); font-weight: 700; display: flex; align-items: center; gap: 0.8rem; font-size: 1.05rem; transition: color 0.3s ease; }
+.contact-link:hover { color: var(--verde-principal); }
+
+/* =======================================================================
+   5. RECOMENDACIONES (BICI CBA + ALIADOS CO-BRANDING)
+   ======================================================================= */
+.bici-cba-banner {
+  background-color: #d4ffa2 !important; 
+  color: var(--texto) !important; 
+  padding: 2.5rem;
+  border-radius: 12px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  margin-bottom: 3rem;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.03);
+}
+.bici-cba-text h3 { font-family: 'Bebas Neue', sans-serif; font-size: 2.2rem; margin: 0.4rem 0; letter-spacing: 0.5px; color: var(--verde-oscuro); }
+.bici-cba-text p { font-size: 1.05rem; max-width: 720px; }
+.tag-municipal { font-family: 'Space Mono', monospace; font-size: 0.8rem; background-color: rgba(0, 0, 0, 0.05); color: var(--verde-oscuro); padding: 0.2rem 0.6rem; border-radius: 4px; text-transform: uppercase; font-weight: 700; }
+.btn-municipal { background-color: var(--verde-oscuro); color: #ffffff !important; text-decoration: none; padding: 0.8rem 1.6rem; border-radius: 30px; font-weight: bold; font-size: 0.95rem; transition: all 0.3s ease; white-space: nowrap; }
+.btn-municipal:hover { background-color: var(--verde-principal); transform: translateY(-2px); }
+
+.programas-section {
+  background: linear-gradient(135deg, #729748 0%, #92b36c 100%); 
+  padding: 3rem 2.5rem;
+  border-radius: 12px;
+  margin: 3rem 0; 
+  color: #ffffff;
+}
+.programas-label { font-family: 'Space Mono', monospace; color: #e2e8f0; font-size: 0.9rem; text-transform: uppercase; letter-spacing: 1px; text-align: center; }
+.programas-title { font-family: 'Bebas Neue', sans-serif; font-size: 3.2rem; color: #ffffff; text-align: center; margin: 0.5rem 0 2.5rem 0; letter-spacing: 1px; }
+.programas-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1.2rem; }
+
+.programa-card {
+  background-color: #729748; 
+  border-radius: 14px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.15);
+  border: 1px solid rgba(255,255,255,0.05);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.programa-card:hover { transform: translateY(-5px); box-shadow: 0 8px 25px rgba(0,0,0,0.25); }
+.programa-img-wrapper { width: 100%; height: 150px; overflow: hidden; background-color: #fff; }
+.programa-img-wrapper img { width: 100%; height: 100%; object-fit: cover; }
+.programa-body { padding: 1.2rem; display: flex; flex-direction: column; flex-grow: 1; }
+.programa-card h3 { font-family: 'Bebas Neue', sans-serif; font-size: 1.6rem; color: #ffffff; margin-bottom: 0.2rem; letter-spacing: 0.5px; }
+.programa-zona { font-family: 'Space Mono', monospace; font-size: 0.75rem; color: #e2e8f0; display: block; margin-bottom: 0.8rem; }
+.programa-body p { font-size: 0.9rem; color: #f1f5f9; line-height: 1.4; margin-bottom: 1.5rem; flex-grow: 1; }
+.btn-outlined { display: inline-block; text-decoration: none; text-align: center; color: #ffffff !important; border: 1.5px solid #ffffff; padding: 0.5rem 1rem; border-radius: 25px; font-size: 0.85rem; font-weight: 500; background: transparent; transition: all 0.3s ease; margin-top: auto; }
+.btn-outlined:hover { background-color: #ffffff; color: #729748 !important; }
+
+/* =======================================================================
+   6. SECCIÓN INTEGRADA: CHECKLIST HOJA VERDE + CONSEJOS
+   ======================================================================= */
+.seguridad-layout-grid {
+  display: grid;
+  grid-template-columns: 1fr 1.3fr;
+  gap: 3rem;
+  align-items: start;
+  margin-top: 3rem;
+  margin-bottom: 4rem;
+}
+.checklist-equipamiento {
+  background-color: #cbeb9b; 
+  padding: 2.5rem;
+  border-radius: 4px;
+}
+.checklist-title, .section-title-seguridad {
+  font-family: 'Bebas Neue', sans-serif;
+  color: #2b4429;
+  text-transform: uppercase;
+  margin-top: 0;
+}
+.checklist-title { font-size: 2.2rem; margin-bottom: 1rem; }
+.section-title-seguridad { font-size: 2.4rem; margin-bottom: 2rem; }
+
+.interactive-checklist {
+  list-style: none !important;
+  padding-left: 0 !important;
+  margin: 1.5rem 0 0 0 !important;
+}
+.interactive-checklist li {
+  display: flex;
+  align-items: center;
+  margin-bottom: 0.9rem;
+}
+.interactive-checklist input[type="checkbox"] {
+  margin-right: 0.8rem;
+  transform: scale(1.1);
+  cursor: pointer;
+}
+.interactive-checklist label {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 0.95rem;
+  color: #333;
+}
+
+.consejo-card {
+  background-color: #ffffff !important;
+  padding: 1.5rem;
+  border-radius: 8px; 
+  margin-bottom: 1.2rem;
+  box-shadow: 0 4px 15px rgba(43, 68, 41, 0.04);
+  border: 1px solid #e3ebe0;
+  transition: transform 0.3s ease;
+}
+
+.consejo-card:hover {
+  transform: translateX(4px); 
+  background-color: #fcfbf7 !important; 
+}
+
+.consejo-card h4 {
+  font-family: 'DM Sans', sans-serif;
+  font-weight: 700;
+  color: #2b4429;
+  margin: 0 0 0.5rem 0;
+  font-size: 1.1rem;
+}
+
+.consejo-card p {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 0.95rem;
+  color: #555;
+  margin: 0;
+  line-height: 1.5;
+}
