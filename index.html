@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Coffee Ride Córdoba</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<div id="wrap-main">
+  <section class="video-hero">
+    
+    <div class="video-container">
+      <video autoplay muted loop playsinline class="hero-video-bg">
+        <source src="Vid/Coffee Ride Video.mp4" type="video/mp4">
+      </video>
+    </div>
+    
+    <div class="hero-video-overlay"></div>
+    
+    <div class="hero-video-content">
+      
+      <header class="vcass-header" style="display: flex; align-items: center; justify-content: space-between; width: 100%; max-width: 1100px; margin: 0 auto; padding: 2.5rem 2rem; background-color: transparent;">
+        <div class="brand-container">
+          <h1 class="logo-text" id="logo">Coffee<span>Ride</span></h1>
+        </div>
+        
+        <nav class="hero-nav">
+          <a href="index.html" class="active">Inicio</a>
+          <a href="Niveles.html">Niveles</a>
+          <a href="Recomendaciones.html">Recomendaciones</a>
+          <a href="autora.html">Sobre Mí</a>
+        </nav>
+      </header>
+
+      <div class="hero-center-text">
+        <h2 class="hero-main-title">Coffee Ride<br>Córdoba</h2>
+        <p class="hero-subtitle">Rutas, Comunidad y Café de Especialidad</p>
+        <br>
+        <a href="#que-es" class="btn-hero-green" onclick="event.preventDefault(); document.getElementById('que-es').scrollIntoView({ behavior: 'smooth' });">Empezá a rodar ↓</a>
+      </div>
+
+    </div>
+  </section>
+
+  <section id="que-es" class="que-es-section container-bleed">
+    <div class="que-es-text">
+      <p class="section-label">El concepto</p>
+      <h2 class="section-title">¿Qué es un Coffee Ride?</h2>
+      <p>Un coffee ride es una salida grupal en bicicleta donde el destino o punto de encuentro es una cafetería. No importa el nivel: es una práctica social, deportiva y cultural que une a la comunidad ciclista cordobesa alrededor del café de especialidad.</p>
+    </div>
+    
+    <div class="features-grid">
+      <div class="feature-card">
+        <div class="feature-icon">🚲</div>
+        <h4>Rutas seguras</h4>
+        <p>Recorridos verificados por la comunidad, con datos de distancia, tiempo y dificultad.</p>
+      </div>
+      
+      <div class="feature-card">
+        <div class="feature-icon">☕</div>
+        <h4>Cafés Bike-Friendly</h4>
+        <p>Lugares que tienen bicicletero, aceptan ciclistas y ofrecen café de especialidad.</p>
+      </div>
+      
+      <div class="feature-card">
+        <div class="feature-icon">👥</div>
+        <h4>Salidas grupales</h4>
+        <p>Encontrá compañía para tus rides y conectá con otros ciclistas de la ciudad.</p>
+      </div>
+      
+      <div class="feature-card">
+        <div class="feature-icon">📍</div>
+        <h4>Mapa interactivo</h4>
+        <p>Visualizá rutas y cafeterías en el mapa, y abrí directo en Google Maps o Strava.</p>
+      </div>
+    </div>
+  </section>
+
+  <hr class="container-bleed">
+
+  <section id="rutas" class="rutas-section container-bleed">
+    <div class="rutas-header">
+      <div>
+        <p class="section-label">Elegí tu nivel</p>
+        <h2 class="section-title">Rutas Destacadas</h2>
+      </div>
+    </div>
+    
+    <div class="rutas-grid">
+      <div class="ruta-card nivel-basico">
+        <div class="ruta-header">
+          <span class="ruta-nivel">Básico</span>
+          <span class="ruta-badge">Fácil</span>
+        </div>
+        <div class="ruta-body">
+          <div class="ruta-stats">
+            <div class="ruta-stat"><span>distancia</span><span>5-10 km</span></div>
+            <div class="ruta-stat"><span>tiempo</span><span>30–45 min</span></div>
+            <div class="ruta-stat"><span>desnivel</span><span>bajo</span></div>
+          </div>
+          <p class="ruta-desc">Ideal para comenzar. Recorridos por el centro y barrios planos, sin necesidad de bicicleta de ruta. Perfecta para el primer coffee ride.</p>
+          <a href="Niveles.html" class="btn-ruta">Ver ruta →</a>
+        </div>
+      </div>
+      
+      <div class="ruta-card nivel-medio">
+        <div class="ruta-header">
+          <span class="ruta-nivel">Medio</span>
+          <span class="ruta-badge">Moderado</span>
+        </div>
+        <div class="ruta-body">
+          <div class="ruta-stats">
+            <div class="ruta-stat"><span>distancia</span><span>10-21 km</span></div>
+            <div class="ruta-stat"><span>tiempo</span><span>1h – 1h30</span></div>
+            <div class="ruta-stat"><span>desnivel</span><span>medio</span></div>
+          </div>
+          <p class="ruta-desc">Para ciclistas con algo de experiencia. Incluye barrios como Cerro de las Rosas, Nueva Córdoba y Güemes, con cafeterías icónicas de destino.</p>
+          <a href="Niveles.html" class="btn-ruta">Ver ruta →</a>
+        </div>
+      </div>
+      
+      <div class="ruta-card nivel-avanzado">
+        <div class="ruta-header">
+          <span class="ruta-nivel">Avanzado</span>
+          <span class="ruta-badge">Desafiante</span>
+        </div>
+        <div class="ruta-body">
+          <div class="ruta-stats">
+            <div class="ruta-stat"><span>distancia</span><span>21-42 km</span></div>
+            <div class="ruta-stat"><span>tiempo</span><span>2h+</span></div>
+            <div class="ruta-stat"><span>desnivel</span><span>alto</span></div>
+          </div>
+          <p class="ruta-desc">Rutas de largo aliento hacia Villa Allende, La Calera o las sierras chicas. Para quienes quieren ganarse el café con altura y distancia.</p>
+          <a href="Niveles.html" class="btn-ruta">Ver ruta →</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <hr class="container-bleed">
+
+  <section id="mapa" class="mapa-section container-bleed">
+    <div class="mapa-text">
+      <p class="section-label">Mapa interactivo</p>
+      <h2 class="section-title">Rutas + Cafeterías en Córdoba</h2>
+      <p>Visualizá todas las rutas y cafeterías bike-friendly de la ciudad. Tocá cada punto para ver info, y abrí directo en Google Maps o Strava desde el celular.</p>
+      <a href="https://www.google.com/maps/d/viewer?mid=1iVHIM1rzh2f1hlhnmc2UpCoohLHbmR0" target="_blank" class="btn-primary">Abrir en Google Maps →</a>
+    </div>
+    <div id="wrap-video" class="mapa-embed">
+      <iframe src="https://www.google.com/maps/d/embed?mid=1iVHIM1rzh2f1hlhnmc2UpCoohLHbmR0&ehbc=2E312F" width="100%" height="100%" style="border:0;" allowfullscreen loading="lazy"></iframe>
+    </div>
+  </section>
+
+  <hr class="container-bleed">
+
+  <section class="cafeterias-section container-bleed" style="margin-top: 4rem; margin-bottom: 4rem;">
+    <p class="section-label" style="color: #c08261; font-family: 'Space Mono', monospace; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 0.5rem;">Destinos más frecuentes</p>
+    <h2 class="section-title" style="font-family: 'Bebas Neue', sans-serif; font-size: 2.8rem; color: #2b4429; text-transform: uppercase; margin-top: 0; margin-bottom: 2.5rem;">Cafeterías Bike-Friendly</h2>
+    
+    <div class="cafeterias-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 2rem;">
+      
+      <div class="cafe-card-clean" style="background: #ffffff; border: 1px solid #e3ebe0; border-radius: 12px; overflow: hidden; box-shadow: 0 4px 20px rgba(43, 68, 41, 0.04); display: flex; flex-direction: column; justify-content: space-between;">
+        <div>
+          <div style="width: 100%; height: 200px; background: #f4f7f2; overflow: hidden;">
+            <img src="img/superanfibio.jpeg" alt="Café Superanfibio Córdoba" style="width: 100%; height: 100%; object-fit: cover;">
+          </div>
+          
+          <div style="padding: 1.8rem 1.8rem 0 1.8rem;">
+            <h3 style="font-family: 'Bebas Neue', sans-serif; font-size: 1.9rem; color: #2b4429; margin: 0; letter-spacing: 0.5px; text-transform: uppercase; min-height: 4.2rem;">Superanfibio</h3>
+            <span style="color: #c08261; font-family: 'Space Mono', monospace; font-size: 0.85rem; display: block; margin: 0.2rem 0 1.2rem 0; font-weight: 500;">Cerro de las Rosas</span>
+            
+            <div style="display: flex; flex-wrap: wrap; gap: 0.5rem; margin-bottom: 1.2rem;">
+              <span style="background: #f0f5ec; color: #2b4429; padding: 0.3rem 0.6rem; border-radius: 4px; font-size: 0.8rem; font-family: 'DM Sans', sans-serif; font-weight: 500;">🚲 Bicicletero</span>
+              <span style="background: #f0f5ec; color: #2b4429; padding: 0.3rem 0.6rem; border-radius: 4px; font-size: 0.8rem; font-family: 'DM Sans', sans-serif; font-weight: 500;">☕ Especialidad</span>
+            </div>
+            
+            <p style="font-family: 'DM Sans', sans-serif; font-size: 0.95rem; color: #4a5548; line-height: 1.6; margin: 0;">Un clásico indiscutido para los coffee rides que apuntan hacia la zona norte. Excelente calibración de café, pastelería artesanal de primer nivel y un patio cómodo para cuidar la bici.</p>
+          </div>
+        </div>
+        
+        <div style="padding: 0 1.8rem 1.8rem 1.8rem; margin-top: 1.5rem;">
+          <a href="https://maps.app.goo.gl/L35oN2jg9WAJqgWB7" target="_blank" style="display: inline-block; font-family: 'DM Sans', sans-serif; font-size: 0.85rem; font-weight: 500; color: #2b4429; text-decoration: none; padding: 0.6rem 1.2rem; border: 1px solid #2b4429; border-radius: 6px; transition: all 0.2s;" onmouseover="this.style.backgroundColor='#2b4429'; this.style.color='#ffffff'" onmouseout="this.style.backgroundColor='transparent'; this.style.color='#2b4429'">Ver en mapa →</a>
+        </div>
+      </div>
+      
+      <div class="cafe-card-clean" style="background: #ffffff; border: 1px solid #e3ebe0; border-radius: 12px; overflow: hidden; box-shadow: 0 4px 20px rgba(43, 68, 41, 0.04); display: flex; flex-direction: column; justify-content: space-between;">
+        <div>
+          <div style="width: 100%; height: 200px; background: #f4f7f2; overflow: hidden;">
+            <img src="img/abiertocafe.png" alt="Abierto Café Córdoba" style="width: 100%; height: 100%; object-fit: cover;">
+          </div>
+          
+          <div style="padding: 1.8rem 1.8rem 0 1.8rem;">
+            <h3 style="font-family: 'Bebas Neue', sans-serif; font-size: 1.9rem; color: #2b4429; margin: 0; letter-spacing: 0.5px; text-transform: uppercase; min-height: 4.2rem;">ABIERTO CAFÉ®</h3>
+            <span style="color: #c08261; font-family: 'Space Mono', monospace; font-size: 0.85rem; display: block; margin: 0.2rem 0 1.2rem 0; font-weight: 500;">Centro</span>
+            
+            <div style="display: flex; flex-wrap: wrap; gap: 0.5rem; margin-bottom: 1.2rem;">
+              <span style="background: #f0f5ec; color: #2b4429; padding: 0.3rem 0.6rem; border-radius: 4px; font-size: 0.8rem; font-family: 'DM Sans', sans-serif; font-weight: 500;">⏱️ Despacho rápido</span>
+              <span style="background: #f0f5ec; color: #2b4429; padding: 0.3rem 0.6rem; border-radius: 4px; font-size: 0.8rem; font-family: 'DM Sans', sans-serif; font-weight: 500;">☕ Al paso</span>
+            </div>
+            
+            <p style="font-family: 'DM Sans', sans-serif; font-size: 0.95rem; color: #4a5548; line-height: 1.6; margin: 0;">Ubicación estratégica en pleno centro, ideal para una parada técnica rápida a mitad de ruta. Formato ágil y eficiente para recargar energías con café de alta calidad sin perder ritmo.</p>
+          </div>
+        </div>
+        
+        <div style="padding: 0 1.8rem 1.8rem 1.8rem; margin-top: 1.5rem;">
+          <a href="https://maps.app.goo.gl/y5bYsy8ETENqj8Zo7" target="_blank" style="display: inline-block; font-family: 'DM Sans', sans-serif; font-size: 0.85rem; font-weight: 500; color: #2b4429; text-decoration: none; padding: 0.6rem 1.2rem; border: 1px solid #2b4429; border-radius: 6px; transition: all 0.2s;" onmouseover="this.style.backgroundColor='#2b4429'; this.style.color='#ffffff'" onmouseout="this.style.backgroundColor='transparent'; this.style.color='#2b4429'">Ver en mapa →</a>
+        </div>
+      </div>
+      
+      <div class="cafe-card-clean" style="background: #ffffff; border: 1px solid #e3ebe0; border-radius: 12px; overflow: hidden; box-shadow: 0 4px 20px rgba(43, 68, 41, 0.04); display: flex; flex-direction: column; justify-content: space-between;">
+        <div>
+          <div style="width: 100%; height: 200px; background: #f4f7f2; overflow: hidden;">
+            <img src="img/uluru.jpeg" alt="Uluru Coffee Villa Allende" style="width: 100%; height: 100%; object-fit: cover;">
+          </div>
+          
+          <div style="padding: 1.8rem 1.8rem 0 1.8rem;">
+            <h3 style="font-family: 'Bebas Neue', sans-serif; font-size: 1.9rem; color: #2b4429; margin: 0; letter-spacing: 0.5px; text-transform: uppercase; min-height: 4.2rem;">Uluru Coffee</h3>
+            <span style="color: #c08261; font-family: 'Space Mono', monospace; font-size: 0.85rem; display: block; margin: 0.2rem 0 1.2rem 0; font-weight: 500;">Villa Allende</span>
+            
+            <div style="display: flex; flex-wrap: wrap; gap: 0.5rem; margin-bottom: 1.2rem;">
+              <span style="background: #f0f5ec; color: #2b4429; padding: 0.3rem 0.6rem; border-radius: 4px; font-size: 0.8rem; font-family: 'DM Sans', sans-serif; font-weight: 500;">⛰️ Post-Sierras</span>
+              <span style="background: #f0f5ec; color: #2b4429; padding: 0.3rem 0.6rem; border-radius: 4px; font-size: 0.8rem; font-family: 'DM Sans', sans-serif; font-weight: 500;">🥐 Gastronomía</span>
+            </div>
+            
+            <p style="font-family: 'DM Sans', sans-serif; font-size: 0.95rem; color: #4a5548; line-height: 1.6; margin: 0;">El punto de llegada predilecto para quienes vuelven de las rutas largas hacia el norte o las Sierras Chicas. Ambiente ciclista por excelencia y una propuesta ideal para recuperar calorías.</p>
+          </div>
+        </div>
+        
+        <div style="padding: 0 1.8rem 1.8rem 1.8rem; margin-top: 1.5rem;">
+          <a href="https://maps.app.goo.gl/UJjh78kLCoGqmWpV6" target="_blank" style="display: inline-block; font-family: 'DM Sans', sans-serif; font-size: 0.85rem; font-weight: 500; color: #2b4429; text-decoration: none; padding: 0.6rem 1.2rem; border: 1px solid #2b4429; border-radius: 6px; transition: all 0.2s;" onmouseover="this.style.backgroundColor='#2b4429'; this.style.color='#ffffff'" onmouseout="this.style.backgroundColor='transparent'; this.style.color='#2b4429'">Ver en mapa →</a>
+        </div>
+      </div>
+      
+    </div>
+  </section>
+
+  <section id="primera-vez" class="primera-vez-section container-bleed" style="background-color: #f3f6f2; padding: 4rem 3rem; border-radius: 16px; margin-top: 4rem; margin-bottom: 4rem; box-shadow: inset 0 0 0 1px rgba(43, 68, 41, 0.02);">
+    
+    <p class="section-label">¿Primera vez?</p>
+    <h2 class="section-title" style="font-family: 'Bebas Neue', sans-serif; font-size: 2.8rem; color: #2b4429; text-transform: uppercase; margin-top: 0; margin-bottom: 0.5rem;">Empezá por acá</h2>
+    <p class="pv-subtitle" style="max-width: 750px; margin: 0 0 3rem 0; font-size: 1.1rem; color: #555;">No hace falta ser ciclista experimentado. En cuatro pasos simples ya estás listo para tu primer coffee ride en Córdoba.</p>
+
+    <style>
+      .pasos-nuevos-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+        gap: 1.5rem;
+        margin-bottom: 3rem;
+        perspective: 1200px; 
+      }
+      .tarjeta-paso-custom {
+        background-color: #ffffff;
+        padding: 2.2rem 1.6rem;
+        border-radius: 12px;
+        box-shadow: 0 4px 20px rgba(43, 68, 41, 0.03);
+        display: flex;
+        flex-direction: column;
+        opacity: 0;
+        transform: rotateX(-35deg) translateY(60px) scale(0.9);
+        transform-origin: top center;
+        transition: transform 0.8s cubic-bezier(0.25, 1, 0.5, 1), 
+                    opacity 0.8s ease, 
+                    box-shadow 0.3s ease, 
+                    background-color 0.3s ease;
+      }
+      .tarjeta-paso-custom.reveal-visible {
+        opacity: 1;
+        transform: rotateX(0deg) translateY(0) scale(1);
+      }
+      .tarjeta-paso-custom.reveal-visible:hover {
+        transform: translateY(-8px) scale(1.02);
+        box-shadow: 0 15px 30px rgba(43, 68, 41, 0.08);
+      }
+      .pasos-nuevos-grid .tarjeta-paso-custom:nth-child(1) { transition-delay: 0.1s; }
+      .pasos-nuevos-grid .tarjeta-paso-custom:nth-child(2) { transition-delay: 0.25s; }
+      .pasos-nuevos-grid .tarjeta-paso-custom:nth-child(3) { transition-delay: 0.4s; }
+      .pasos-nuevos-grid .tarjeta-paso-custom:nth-child(4) { transition-delay: 0.55s; }
+
+      .paso-head-flex { display: flex; justify-content: space-between; align-items: center; margin-bottom: 1.2rem; }
+      .paso-num-digital { font-family: 'Space Mono', monospace; font-size: 1.6rem; font-weight: 700; color: #2b4429; opacity: 0.15; }
+      .paso-emoji-icon { font-size: 2rem; }
+      .paso-card-title { font-family: 'Bebas Neue', sans-serif; font-size: 1.5rem; color: #2b4429; margin: 0 0 0.6rem 0; text-transform: uppercase; letter-spacing: 0.5px; }
+      .paso-card-desc { font-family: 'DM Sans', sans-serif; font-size: 0.95rem; color: #555; line-height: 1.5; margin: 0; }
+      
+      .top-border-basico { border-top: 4px solid #6B8E23; }
+      .top-border-medio { border-top: 4px solid #4682B4; }
+      .top-border-avanzado { border-top: 4px solid #CD5C5C; }
+      .top-border-cafe { border-top: 4px solid #c08261; }
+    </style>
+
+    <div class="pasos-nuevos-grid">
+      <div class="tarjeta-paso-custom top-border-basico">
+        <div class="paso-head-flex">
+          <span class="paso-num-digital">01</span>
+          <div class="paso-emoji-icon">🚲</div>
+        </div>
+        <h4 class="paso-card-title">Elegí tu nivel</h4>
+        <p class="paso-card-desc">¿Primera vez sobre la bici en la ciudad? Empezá con una ruta básica de 3–5 km, sin desnivel y por zonas conocidas.</p>
+      </div>
+
+      <div class="tarjeta-paso-custom top-border-medio">
+        <div class="paso-head-flex">
+          <span class="paso-num-digital">02</span>
+          <div class="paso-emoji-icon">📍</div>
+        </div>
+        <h4 class="paso-card-title">Buscá tu ruta</h4>
+        <p class="paso-card-desc">Entrá al mapa interactivo, elegí la ruta según tu nivel y abrila directo en Google Maps o Strava desde el celular.</p>
+      </div>
+
+      <div class="tarjeta-paso-custom top-border-avanzado">
+        <div class="paso-head-flex">
+          <span class="paso-num-digital">03</span>
+          <div class="paso-emoji-icon">🎒</div>
+        </div>
+        <h4 class="paso-card-title">Preparate</h4>
+        <p class="paso-card-desc">Revisá el checklist de equipamiento en la Guía Rider. Con casco, agua y candado ya tenés lo esencial cubierto.</p>
+      </div>
+
+      <div class="tarjeta-paso-custom top-border-cafe">
+        <div class="paso-head-flex">
+          <span class="paso-num-digital">04</span>
+          <div class="paso-emoji-icon">☕</div>
+        </div>
+        <h4 class="paso-card-title">¡A rodar!</h4>
+        <p class="paso-card-desc">Salí solo o sumate al grupo de WhatsApp. Al final del recorrido, el café te espera. Te lo ganaste.</p>
+      </div>
+    </div>
+
+    <div class="audio-block" style="background: #ffffff; box-shadow: 0 4px 20px rgba(0,0,0,0.02);">
+      <p class="section-label" style="margin-bottom:0.5rem;">🎧 La playlist del ride</p>
+      <p class="audio-desc">Música para acompañar cada pedalada. Dale play antes de salir.</p>
+      <iframe data-testid="embed-iframe" style="border-radius:12px" src="https://open.spotify.com/embed/playlist/5JcOirHIyEwI00VgXxDEoR?utm_source=generator" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+    </div>
+
+    <div class="wpp-banner">
+      <div class="wpp-text">
+        <h4>Sumate al grupo de WhatsApp</h4>
+        <p>Salidas grupales, rutas nuevas y la comunidad ciclista de Córdoba en un solo lugar.</p>
+      </div>
+      <a href="https://chat.whatsapp.com/BSTPSPPaeJ772yegLFa270" target="_blank" class="btn-wpp">
+        💬 Unirme al grupo
+      </a>
+    </div>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const tarjetas = document.querySelectorAll('.tarjeta-paso-custom');
+        
+        const observerOptions = {
+          root: null,
+          rootMargin: "0px",
+          threshold: 0.15 
+        };
+
+        const cardObserver = new IntersectionObserver((entries, observer) => {
+          entries.forEach(entry => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add('reveal-visible');
+              observer.unobserve(entry.target); 
+            }
+          });
+        }, observerOptions);
+
+        tarjetas.forEach(tarjeta => cardObserver.observe(tarjeta));
+      });
+    </script>
+  </section>
+
+  <footer class="container-bleed">
+    <p id="footer">© 2026 Coffee Ride Córdoba — Antonella Herrera · Diseño Multimedia I · Lic. Publicidad · Universidad Blas Pascal ·</p>
+  </footer>
+</div>
+
+<script>
+  const currentPath = window.location.pathname.split('/').pop() || 'index.html';
+  document.querySelectorAll('nav a').forEach(link => {
+    if (link.getAttribute('href') === currentPath) {
+      link.classList.add('active');
+    } else {
+      link.classList.remove('active');
+    }
+  });
+</script>
+</body>
+</html>
